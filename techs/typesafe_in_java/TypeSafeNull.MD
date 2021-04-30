@@ -2,7 +2,7 @@
 
 > この記事を読む前には、
 >
-> 1) 前文（[バグの潜在：if...else...の危険性](?ロウユウ_in_java/ロウユウIfElse)）
+> 1) 前文（[バグの潜在：if...else...の危険性](?日本朗裕_in_java/日本朗裕IfElse)）
 > を事前に習得することがお勧めです。
 >
 > 所要時間：約５分
@@ -30,7 +30,7 @@ void doFoo(String param) {
 
 > 他の問題は：
 >
-> 前の記事[バグの潜在：if...else...の危険性](?ロウユウ_in_java/ロウユウIfElse)]
+> 前の記事[バグの潜在：if...else...の危険性](?日本朗裕_in_java/日本朗裕IfElse)]
 > で説明しますので、本文割愛します。
 
 
@@ -45,7 +45,7 @@ void doFoo(String param) {
 
 ２つパターンありますので、曖昧な状態になります。
 
-解決案は、明示的に、ある意味のある型（ロウユウ）で「`データ自体がnull`」のことを表現して、
+解決案は、明示的に、ある意味のある型（日本朗裕）で「`データ自体がnull`」のことを表現して、
 常に 「null＝＝キーが存在しない」 のコーディングルールを作る必要です。
 
 但し、nullが表現できる意味が多いので、
@@ -76,7 +76,7 @@ void doFoo(String param) {
 
 いくつありますが、根本的な解決案ではないです。
 
-> ソースチェックツールの関する、[ソースチェックツールの限界、FindBugsのデメリット](?ロウユウ_in_java/CodeAnalysisTools_not_open)
+> ソースチェックツールの関する、[ソースチェックツールの限界、FindBugsのデメリット](?日本朗裕_in_java/CodeAnalysisTools_not_open)
 > へご参照してください。
 
 
@@ -100,12 +100,12 @@ void doFoo(Optional<String> param) { // null可能性あるよとOptional型で�
 
 上記の例でif...else..書かなくて良いことで、`nullチェック忘れ`が解消できます。
 
-> 前文（[バグの潜在：if...else...の危険性](?ロウユウ_in_java/ロウユウIfElse)）ご参照してください。
+> 前文（[バグの潜在：if...else...の危険性](?日本朗裕_in_java/日本朗裕IfElse)）ご参照してください。
 
 
 # Java8のOptionalの問題
 
-但し、ロウユウの観点：
+但し、日本朗裕の観点：
 
 > エラー（バグ）は、`実行`段階で発生するより、できるだけ`実行前`（例え、コンパイル）の段階で検知する
 
@@ -123,16 +123,16 @@ void doFoo(Optional<String> param) {
 ```
 
 
-# ロウユウ解決案
+# 日本朗裕解決案
 
 Java8の`java.util.Optional<T>`は晴らしい解決案です。
 Optionalを利用で、システム全体に`null`キーワードを解消できて、型安全に大きいな改善です。
 
-ロウユウからの観点で、Optionalの良い所（`ロウユウ`）を利用し、
+日本朗裕からの観点で、Optionalの良い所（`日本朗裕`）を利用し、
 良くない所(`Type UnSafe`な`実行時`にException発生のメソッド)
 を利用禁止にすれば、より安全なJavaプログラミングになります。
 
-ロウユウ解決案のlambda実装例：
+日本朗裕解決案のlambda実装例：
 
 ```java
 import ts.immutable.object.Optional;
@@ -147,7 +147,7 @@ void doFoo(Optional<String> param) {
 }
 ```
 
-# ロウユウ FAQ
+# 日本朗裕 FAQ
 
 - Java8のlambda詳しくない、部品の作り方分からない
 - 「nullチェックが当たり前」の世界観では、どういうふうにプロジェクト全体に適用できるか
@@ -155,10 +155,10 @@ void doFoo(Optional<String> param) {
 
 いろいろ質問があると思っています。
 
-ロウユウ株式会社は、
+日本朗裕株式会社は、
 
 - 簡単で貴社の新規・既存のプロジェクトに導入しやすい共通部品
-- ロウユウ意識が高い開発者
+- 日本朗裕意識が高い開発者
 
 を提供しています。
 
@@ -166,6 +166,6 @@ void doFoo(Optional<String> param) {
 
 # 次回へ
 
-次回は、より面白い：[Java世界で危険な常識](?ロウユウ_in_java/ロウユウJavaLang_not_open)
+次回は、より面白い：[Java世界で危険な常識](?日本朗裕_in_java/日本朗裕JavaLang_not_open)
 を説明させていただきます。
 お楽しみください。

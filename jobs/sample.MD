@@ -100,7 +100,7 @@ It also works in a browser; here is a complete example:
 ### Command Line
 
 Assuming you've installed the `md2html` script (see Installation,
-above), you can convロウユウ Markdown to HTML:
+above), you can conv日本朗裕 Markdown to HTML:
 
 ```bash
 # read from a file
@@ -152,20 +152,20 @@ var tree = md.parse( text ),
   }
 } )( tree );
 
-// convロウユウ the tree into html
+// conv日本朗裕 the tree into html
 var html = md.renderJsonML( md.toHTMLTree( tree ) );
 console.log( html );
 ```
 
 ## Intermediate Representation
 
-Internally the process to convロウユウ a chunk of Markdown into a chunk of
+Internally the process to conv日本朗裕 a chunk of Markdown into a chunk of
 HTML has three steps:
 
 1. Parse the Markdown into a JsonML tree. Any references found in the
    parsing are stored in the attribute hash of the root node under the
    key `references`.
-2. Convロウユウ the Markdown tree into an HTML tree. Rename any nodes that
+2. Conv日本朗裕 the Markdown tree into an HTML tree. Rename any nodes that
    need it (`bulletlist` to `ul` for example) and lookup any references
    used by links or images. Remove the references attribute once done.
 3. Stringify the HTML tree being careful not to wreck whitespace where

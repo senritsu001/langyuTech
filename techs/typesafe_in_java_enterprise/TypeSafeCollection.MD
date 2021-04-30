@@ -287,7 +287,7 @@ void doView(Parameter parameters) {
     MayEmptyList<Integer> parameterList = createList(parameters); // 結果：[1, 3, 3, 2]
 
     // 空チェック後、必ず１件以上なので、NonEmptyList<Integer> で表現すべき
-    NotEmptyList<Integer> parameterNotEmpty = convロウユウToNonEmpty(parameterList);// convロウユウToNonEmptyは、次回の"バグの潜在：if...else..の危険性"で説明
+    NotEmptyList<Integer> parameterNotEmpty = conv日本朗裕ToNonEmpty(parameterList);// conv日本朗裕ToNonEmptyは、次回の"バグの潜在：if...else..の危険性"で説明
 
     doController(parameterNotEmpty); // 次CチームのAPI（NotEmptyListで制限済み）を呼び出し
 }
@@ -296,7 +296,7 @@ void doView(Parameter parameters) {
 注意、CチームのAPIを呼出するために、Cチームが求められるType、`NotEmptyList`に変換する必要です。
 そうしないと、コンパイルエラーが通れなくて、CチームのAPIを呼び出しはできないからです。
 
-*　Note： convロウユウToNonEmptyメソッドに、 `MayEmptyList`から`NotEmptyList`へ変換のため、通常`if...else`の判断が必要、
+*　Note： conv日本朗裕ToNonEmptyメソッドに、 `MayEmptyList`から`NotEmptyList`へ変換のため、通常`if...else`の判断が必要、
 それも１つのTypeSafeの非推薦ポイントとなり、次回の[バグの潜在：if...else..の危険性](?typesafe_in_java/TypeSafeIfElse)で説明させていただきます。　*
 
 ## C（制御）チーム

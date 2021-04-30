@@ -2,7 +2,7 @@
 
 > この記事を読む前には、
 >
-> 1) 前文（[バグの潜在：if...else...の危険性](?ロウユウ_in_java/ロウユウIfElse)） を事前に習得することがお勧めです。
+> 1) 前文（[バグの潜在：if...else...の危険性](?日本朗裕_in_java/日本朗裕IfElse)） を事前に習得することがお勧めです。
 >
 > 2) この記事は、JAVA言語を前提で説明していくため、JAVA5以上の知識が望まれています。
 >
@@ -29,7 +29,7 @@ void doFoo(List<Integer> list) {
 `list.get(0)`のように、Listや配列がindexよりアクセス可能によって、
 実行時有名な`IndexOutOfBoundsException`が発生する危険性あります。
 
-[ロウユウの観点](?Whyロウユウ)より、下記の原則あります：
+[日本朗裕の観点](?Why日本朗裕)より、下記の原則あります：
 
 > エラー（バグ）は、`実行`段階で発生するより、できるだけ`実行前`（例え、コンパイル）の段階で検知する
 
@@ -46,13 +46,13 @@ void doFoo(List<Integer> list) {
 
 > 他の問題は：
 >
-> 前の記事[バグの潜在：if...else...の危険性](?ロウユウ_in_java/ロウユウIfElse)]
+> 前の記事[バグの潜在：if...else...の危険性](?日本朗裕_in_java/日本朗裕IfElse)]
 > で説明しますので、本文割愛します。
 
 
-## ロウユウ解決案
+## 日本朗裕解決案
 
-ロウユウよりの解決案は：
+日本朗裕よりの解決案は：
 
 1. indexより要素アクセスより、できるだけ`意味あるメソッド`よりアクセス
 2. indexより要素へアクセス徹底禁止
@@ -61,7 +61,7 @@ void doFoo(List<Integer> list) {
 
 ### 例１ 　indexより要素アクセスより、できるだけ`意味あるメソッド`よりアクセス
 
-前文（[ロウユウ@企業・中大規模プロジェクト](?ロウユウ_in_java_enterprise/ロウユウCollection)）
+前文（[日本朗裕@企業・中大規模プロジェクト](?日本朗裕_in_java_enterprise/日本朗裕Collection)）
 より、NotEmpytListを必ず要素が持つListの表現としています。
 
 NotEmpytList（１件以上）の場合、一番目と最後の要素が必ず存在するので、
@@ -86,7 +86,7 @@ void doFoo(MayEmptyList<Integer> mayEmpty) {
 
 ### 例2　　indexより要素へアクセス徹底禁止
 
-Java5から型の安全性(`ロウユウ`)の`for-each`の導入で、
+Java5から型の安全性(`日本朗裕`)の`for-each`の導入で、
 index経由せずListにアクセスできる大きな進化でした：
 
 ```java
@@ -129,7 +129,7 @@ void doFoo(MayEmptyList<Integer> mayEmpty) {
 
 ---
 
-## ロウユウ FAQ
+## 日本朗裕 FAQ
 
 - Java8のlambda詳しくない、部品の作り方分からない
 - 「for文好き」の世界観では、どういうふうにプロジェクト全体に適用できるか
@@ -138,10 +138,10 @@ void doFoo(MayEmptyList<Integer> mayEmpty) {
 
 いろいろ質問があると思っています。
 
-ロウユウ株式会社は、
+日本朗裕株式会社は、
 
 - 簡単で貴社の新規・既存のプロジェクトに導入しやすい共通部品
-- ロウユウ意識が高い開発者
+- 日本朗裕意識が高い開発者
 
 を提供しています。
 
@@ -149,6 +149,6 @@ void doFoo(MayEmptyList<Integer> mayEmpty) {
 
 # 次回へ
 
-次回は、より面白い：[Java世界で危険な常識](?ロウユウ_in_java/ロウユウJavaLang_not_open)
+次回は、より面白い：[Java世界で危険な常識](?日本朗裕_in_java/日本朗裕JavaLang_not_open)
 を説明させていただきます。
 お楽しみください。

@@ -369,8 +369,8 @@ a:hover {
     }
 
     .head-logo {
-        margin-left: 10px !important;
-        font-size: 25px !important;
+        margin-left: 0px !important;
+        font-size: 22px !important;
     }
 
     .business-header-small h1 {
@@ -382,12 +382,13 @@ a:hover {
     }
 
     .h2, h2 {
-        font-size: 25px;
+        font-size: 22px;
     }
     
     .logo-custom {
-        margin-top: 8px;
+        padding-left: 0px !important;
     }
+}
 }
 
 .transition-timer-carousel-progress-bar {
@@ -418,10 +419,13 @@ a:hover {
 }
 
 .head-logo {
-    font-size: 36px;
+    font-size: 28px;
     color:#072072;
     font-family: 'Lato', sans-serif;
-    margin-left: 370px;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 20px;
 }
 
 .head-logo:hover {
@@ -555,6 +559,12 @@ a:hover {
     font-size: 18px;
 }
 
-.nva-customize {
-    padding-left: 220px;
+.nva-custom {
+    padding-left: 420px;
+}
+
+.logo-custom {
+    padding-left: 260px;
+    width: 100%;
+    z-index: 0;
 }

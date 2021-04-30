@@ -232,8 +232,8 @@ body {
     top: 0;
     background: #33aa33;
     height: 3px;
-    -webkit-transition-prop日本朗裕y: right;
-    transition-prop日本朗裕y: right;
+    -webkit-transition-propery: right;
+    transition-property: right;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
@@ -370,10 +370,23 @@ a:hover {
 
     .head-logo {
         margin-left: 10px !important;
+        font-size: 25px !important;
     }
 
     .business-header-small h1 {
         font-size: 18px;
+    }
+
+    .nva-customize{
+        padding-left: 0px !important;
+    }
+
+    .h2, h2 {
+        font-size: 25px;
+    }
+    
+    .logo-custom {
+        margin-top: 8px;
     }
 }
 
@@ -480,7 +493,7 @@ a:hover {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #f80000;
+    background-color: #000;
 }
 
 .navbar-toggle .icon-bar {

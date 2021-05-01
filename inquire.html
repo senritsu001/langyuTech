@@ -36,7 +36,7 @@
         </iframe>
     </div> -->
 
-    <iframe id="inquireForm"  src="https://sgfm.jp/f/c0050aade1b61e18701d25431eab3eb8" width="100%" height="800" frameborder="0" style="border:0"></iframe>
+    <iframe id="inquireForm" src="https://sgfm.jp/f/c0050aade1b61e18701d25431eab3eb8" width="100%" height="800" frameborder="0" style="border:0"></iframe>
 
 
     <!-- <div  class="embed-responsive" style="width:100%;height:1400px;overflow:auto;-webkit-overflow-scrolling:touch;">
@@ -61,6 +61,12 @@
         $('#inquire_loading').delay(300).queue(function () {
             $(this).hide();
         });//hide(0);
+        
+        var adBlock = document.getElementsByClassName('ad-block');
+        if (adBlock.length > 0) {
+        alert("1111");
+        adBlock[0].remove();
+        }
     });
 </script>
 <!-- Google Analytics -->

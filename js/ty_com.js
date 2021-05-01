@@ -142,3 +142,11 @@ function block_toggle(target, active_icon) {
     $("#" + target).fadeToggle(800);
     $("#" + active_icon).toggleClass("glyphicon glyphicon-chevron-down").toggleClass("glyphicon glyphicon-chevron-up");
 }
+
+window.onload = function(){
+    var adBlock = document.getElementsByClassName('ad-block');
+    if (adBlock.length > 0) {
+        alert("1111");
+       adBlock[0].remove();
+    }
+}

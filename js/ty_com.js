@@ -68,13 +68,13 @@ $(window).load(function () {
             $progress_bar_color_init = $progress_bar_color_init + 1;
             switch ($progress_bar_color_init) {
                 case 1:
-                    $bar.css({background: "#d17cff"});
+                    $bar.css({background: "#0071c5"});
                     break;
                 case 2:
-                    $bar.css({background: "#6fff4c"});
+                    $bar.css({background: "#0071c5"});
                     break;
                 case 3:
-                    $bar.css({background: "#5b9aff"});
+                    $bar.css({background: "#0071c5"});
                     $progress_bar_color_init = 0;
                     break;
             }

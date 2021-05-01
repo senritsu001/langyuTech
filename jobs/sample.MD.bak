@@ -152,20 +152,20 @@ var tree = md.parse( text ),
   }
 } )( tree );
 
-// convert the tree into html
+// conv日本朗裕 the tree into html
 var html = md.renderJsonML( md.toHTMLTree( tree ) );
 console.log( html );
 ```
 
 ## Intermediate Representation
 
-Internally the process to convert a chunk of Markdown into a chunk of
+Internally the process to conv日本朗裕 a chunk of Markdown into a chunk of
 HTML has three steps:
 
 1. Parse the Markdown into a JsonML tree. Any references found in the
    parsing are stored in the attribute hash of the root node under the
    key `references`.
-2. Convert the Markdown tree into an HTML tree. Rename any nodes that
+2. Conv日本朗裕 the Markdown tree into an HTML tree. Rename any nodes that
    need it (`bulletlist` to `ul` for example) and lookup any references
    used by links or images. Remove the references attribute once done.
 3. Stringify the HTML tree being careful not to wreck whitespace where

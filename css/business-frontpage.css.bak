@@ -5,10 +5,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
- body {
-    font-family: 'Noto Sans JP',sans-serif!important;
-}
-
 html {
     position: relative;
     min-height: 100%;
@@ -82,11 +78,6 @@ body {
 /* Customize the text color and shadow color and to optimize text legibility. */
 
 .tagline {
-    text-shadow: 0 0 10px rgba(20, 24, 67, 0.91);
-    color: #fff;
-}
-
-.tagline2 {
     text-shadow: 0 0 10px rgba(20, 24, 67, 0.91);
     color: #fff;
 }
@@ -219,11 +210,11 @@ body {
 }
 
 .menu_active {
-   /* // background-color: #33aa33;
-   // text-decoration: none;
-   // border-top: solid 3px #33aa33; */
+   /* background-color: #33aa33;
+    text-decoration: none;
+    border-top: solid 3px #33aa33; */
     font-size: 18px !important;
-    color: #efaa97 !important;
+    color: #005bac !important;
 }
 
 .hvr-underline-from-left:active:after,
@@ -239,9 +230,9 @@ body {
     left: 0;
     right: 100%;
     top: 0;
-    background: #0071c5;
+    background: #33aa33;
     height: 3px;
-    -webkit-transition-property: right;
+    -webkit-transition-propery: right;
     transition-property: right;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -398,10 +389,11 @@ a:hover {
         padding-left: 0px !important;
     }
 }
+}
 
 .transition-timer-carousel-progress-bar {
     height: 3px;
-    background-color: #004196; /*progress bar color*/
+    background-color: #5b9aff; /*progress bar color*/
     width: 0;
     margin: 0 0 0 0;
     border: none;
@@ -428,7 +420,7 @@ a:hover {
 
 .head-logo {
     font-size: 28px;
-    color:#0071c5;
+    color:#072072;
     font-family: 'Lato', sans-serif;
     float: left;
     height: 50px;
@@ -438,7 +430,7 @@ a:hover {
 
 .head-logo:hover {
     text-decoration: none;
-    color: #0071c5;
+    color: #072072;
 }
 
 .hp-slide {
@@ -575,8 +567,4 @@ a:hover {
     padding-left: 260px;
     width: 100%;
     z-index: 0;
-}
-
-.carousel-indicators .active {
-    background-color: #004196;
 }

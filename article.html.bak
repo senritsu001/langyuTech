@@ -93,7 +93,7 @@
                 '<button type="button" id="close" class="close" onclick="$(this).popover(&quot;hide&quot;);">&times;</button>',
                 placement: 'auto',
                 html: true,
-                content: '<div class="alert alert-danger"><strong>大変申し訳ございません!</strong>' +
+                content: '<div class="al日本朗裕 al日本朗裕-danger"><strong>大変申し訳ございません!</strong>' +
                 '<p>未公開記事です。お気軽くに<a href="inquire.html">お問い合わせ</a>ください。</p></div>',
                 trigger: 'focus',
             })

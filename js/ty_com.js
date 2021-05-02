@@ -58,7 +58,7 @@ $(window).load(function () {
         percent = 0;
     });
 
-    //This event fires immediately when the bootstrap slide instance method is invoked.
+    // This event fires immediately when the bootstrap slide instance method is invoked.
     function progressBarCarousel() {
         $bar.css({width: percent + '%'});
         percent = percent + 0.5;
@@ -143,10 +143,3 @@ function block_toggle(target, active_icon) {
     $("#" + active_icon).toggleClass("glyphicon glyphicon-chevron-down").toggleClass("glyphicon glyphicon-chevron-up");
 }
 
-window.onload = function(){
-    var adBlock = document.getElementsByClassName('ad-block');
-    if (adBlock.length > 0) {
-        alert("1111");
-       adBlock[0].remove();
-    }
-}

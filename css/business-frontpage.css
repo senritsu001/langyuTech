@@ -337,7 +337,7 @@ a:hover {
     background: linear-gradient(to bottom, #a7cfdf 0%, #23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7cfdf', endColorstr='#23538a', GradientType=0); /* IE6-9 */
     text-align: center;
-    height: 360px; /*change as your needs*/
+    height: 400px; /*change as your needs*/
 }
 
 .control-buttons {
@@ -378,6 +378,7 @@ a:hover {
     }
 
     .head-logo {
+        padding-left: 14px !important;
         margin-left: 0px !important;
         font-size: 22px !important;
     }
@@ -432,13 +433,16 @@ a:hover {
     font-family: 'Lato', sans-serif;
     float: left;
     height: 50px;
-    padding: 15px 15px;
     line-height: 20px;
 }
 
 .head-logo:hover {
     text-decoration: none;
     color: #0071c5;
+}
+
+.head-logo a {
+    text-decoration: none;
 }
 
 .hp-slide {
@@ -549,7 +553,7 @@ a:hover {
 
 .address-icon{
     color: #0071c5;
-    font-size: 3ex;
+    font-size: 2ex;
 }
 
 #page-top {
@@ -567,16 +571,18 @@ a:hover {
     font-size: 18px;
 }
 
-.nva-custom {
-    padding-left: 420px;
-}
-
-.logo-custom {
-    padding-left: 210px;
-    width: 100%;
-    z-index: 0;
-}
-
 .carousel-indicators .active {
     background-color: #004196;
+}
+
+.navbar-right-custom {
+    margin-right: 8%;
+}
+
+.navbar-brand {
+    padding-left: 40px;
+}
+
+.slide-img-custom {
+    max-width : inherit !important;
 }

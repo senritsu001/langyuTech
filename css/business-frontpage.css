@@ -366,11 +366,11 @@ a:hover {
     }
 
     .carousel-inner > .item  {
-        height: 188px;
         overflow: hidden;
     }
 
     .carousel-inner > .item > img {
+        height: 200px;
         width: 100%;
     }
 

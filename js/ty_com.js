@@ -1,3 +1,15 @@
+// $('#inquireForm').load(function(){
+//     console.log("11111111111111111");
+//     setTimeout(function() {
+//         console.log("settimeout start");
+//         var test=document.getElementsByClassName('ad-block')[0];
+//         if (test) {
+//             test.item(0).remove();
+//         }
+//         console.log("settimeout end");
+//     }, 5000);
+// });
+
 $(function () {
     $("#ty_header").load("ty_header.html", function () {
         var matchKey = window.location.pathname;

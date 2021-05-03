@@ -434,7 +434,6 @@ a:hover {
 
 .head-logo {
     font-size: 28px;
-    color:#0071c5;
     font-family: 'Lato', sans-serif;
     float: left;
     height: 50px;
@@ -443,11 +442,12 @@ a:hover {
 
 .head-logo:hover {
     text-decoration: none;
-    color: #0071c5;
+    color:#0071c5 !important;
 }
 
 .head-logo a {
     text-decoration: none;
+    color:#0071c5 !important;
 }
 
 .hp-slide {

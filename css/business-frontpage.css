@@ -366,7 +366,7 @@ a:hover {
     }
 
     .carousel-inner > .item  {
-        height: 188px;
+        height: 100px;
         overflow: hidden;
     }
 

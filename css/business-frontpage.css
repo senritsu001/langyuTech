@@ -365,8 +365,13 @@ a:hover {
         font-size: 8px;
     }
 
+    .carousel-inner > .item  {
+        height: 300px;
+        overflow: hidden;
+    }
+
     .carousel-inner > .item > img {
-        height: 188px;
+        width: 100%;
     }
 
     .carousel-caption-cs h3 {

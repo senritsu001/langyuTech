@@ -82,7 +82,7 @@ body {
 /* Customize the text color and shadow color and to optimize text legibility. */
 
 .tagline {
-    text-shadow: 0 0 10px rgba(20, 24, 67, 0.91);
+    text-shadow: 2px 2px 10px rgb(20, 24, 67);
     color: #fff;
 }
 
@@ -403,6 +403,12 @@ a:hover {
     .logo-custom {
         padding-left: 0px !important;
     }
+
+    .carousel-caption-cs {
+        bottom: 50px !important;
+        padding-left: 28px;
+    }
+
 }
 
 .transition-timer-carousel-progress-bar {

@@ -71,27 +71,27 @@ $(window).load(function () {
     });
 
     // This event fires immediately when the bootstrap slide instance method is invoked.
-    function progressBarCarousel() {
-        $bar.css({width: percent + '%'});
-        percent = percent + 0.5;
-        if (percent >= 100) {
-            percent = 0;
-            $crsl.carousel('next');
-            $progress_bar_color_init = $progress_bar_color_init + 1;
-            switch ($progress_bar_color_init) {
-                case 1:
-                    $bar.css({background: "#0071c5"});
-                    break;
-                case 2:
-                    $bar.css({background: "#0071c5"});
-                    break;
-                case 3:
-                    $bar.css({background: "#0071c5"});
-                    $progress_bar_color_init = 0;
-                    break;
-            }
-        }
-    }
+    // function progressBarCarousel() {
+    //     $bar.css({width: percent + '%'});
+    //     percent = percent + 0.5;
+    //     if (percent >= 100) {
+    //         percent = 0;
+    //         $crsl.carousel('next');
+    //         $progress_bar_color_init = $progress_bar_color_init + 1;
+    //         switch ($progress_bar_color_init) {
+    //             case 1:
+    //                 $bar.css({background: "#0071c5"});
+    //                 break;
+    //             case 2:
+    //                 $bar.css({background: "#0071c5"});
+    //                 break;
+    //             case 3:
+    //                 $bar.css({background: "#0071c5"});
+    //                 $progress_bar_color_init = 0;
+    //                 break;
+    //         }
+    //     }
+    // }
 
     var barInterval = setInterval(progressBarCarousel, interval);//set interval to progressBarCarousel function
     if (!(/Mobi/.test(navigator.userAgent))) {//tests if it isn't mobile

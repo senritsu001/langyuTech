@@ -48,6 +48,6 @@
 
 欢迎各位程序猿的咨询和加入。
 
-咨询地址：[info@langyutech.co.jp](mailto:info@langyutech.co.jp?subject=案件ID：TS001CN)
+咨询地址：[info@langyutech.jp](mailto:info@langyutech.jp?subject=案件ID：TS001CN)
 
 

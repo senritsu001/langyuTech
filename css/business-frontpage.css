@@ -308,8 +308,8 @@ a:hover {
 }
 
 .business_table {
-    margin-top: 20px;
-    font-size: x-small;
+    margin-top: 28px;
+    font-size: medium;
 }
 
 .policy_sign {
@@ -528,7 +528,7 @@ a:hover {
 }
 
 .map-bottom {
-    margin-bottom: 35px;
+    margin-bottom: 80px;
 }
 
 .wrap-newsList-link a:before {
@@ -596,4 +596,7 @@ a:hover {
 
 .slide-img-custom {
     max-width : inherit !important;
+}
+.business-row {
+    margin-bottom: 50px;
 }

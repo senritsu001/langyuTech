@@ -1,4 +1,4 @@
-# JAVA研究案件
+<!-- # JAVA研究案件
 
 ## 概要
 
@@ -45,9 +45,16 @@ JAVAに熱意あり、RDBMSとNoSQLデータベースへの基本的な理解。
 
 主には横浜。
 
-但し、優秀な人材に、場所限らないので、ご配慮がある方ぜひご相談してください。
+但し、優秀な人材に、場所限らないので、ご配慮がある方ぜひご相談してください。 -->
 
+NR* 上流設計から運用までＳＥ要員を募集しております。
+
+日本語は対客にコミュニケーションできる方
+
+特に開発言語に限りません
+
+主には都内・横浜。
 
 皆様のお問い合わせ、ご応募をお待ちしています。
 
-問い合わせ先：[support@langyutech.co.jp](mailto:support@langyutech.co.jp?subject=案件ID：NT001JP)
+問い合わせ先：[recruit@langyutech.jp](mailto:recruit@langyutech.jp?subject=案件ID：NT001JP)

@@ -1,5 +1,4 @@
-# 証券・銀行系システム開発の設計・開発から運用・保守までの各工程要員を募集いたします。
-
+## 証券・銀行系システム開発の設計・開発から運用・保守までの各工程要員を募集いたします。
 
 ## 場所
 
@@ -10,4 +9,4 @@
 
 皆様のお問い合わせ、ご応募をお待ちしています。
 
-問い合わせ先：[support@langyutech.co.jp](mailto:support@langyutech.co.jp?subject=案件ID：NT001JP)
+問い合わせ先：[recruit@langyutech.jp](mailto:recruit@langyutech.jp?subject=案件ID：NT001JP)

@@ -409,6 +409,23 @@ a:hover {
         padding-left: 28px;
     }
 
+    .navbar-right-custom {
+        margin-right: 0% !important;
+    }
+    
+    .navbar-nav>li>a {
+        margin-left: 10px;
+    }
+    
+    .navbar-collapse{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+    
+    .nav-ul-li-hover:hover{
+        background-color: #0071c5;
+    }
+
 }
 
 .transition-timer-carousel-progress-bar {

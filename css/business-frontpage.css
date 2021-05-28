@@ -383,7 +383,7 @@ a:hover {
     }
 
     .head-logo {
-        padding-left: 14px !important;
+        /* padding-left: 14px !important; */
         margin-left: 0px !important;
         font-size: 22px !important;
     }
@@ -456,21 +456,29 @@ a:hover {
 }
 
 .head-logo {
-    font-size: 28px;
+    font-size: 24px;
     font-family: 'Lato', sans-serif;
     float: left;
     height: 50px;
     line-height: 20px;
+    margin: auto;
+    /* padding-top: 10px; */
+    /* width: 60%; */
+    /* border: 3px solid #73AD21; */
+    /* padding: 10px; */
+    
 }
 
 .head-logo:hover {
     text-decoration: none;
-    color:#0071c5 !important;
+    /* color:#0071c5 !important; */
+    color:#325b94 !important;
 }
 
 .head-logo a {
     text-decoration: none;
-    color:#0071c5 !important;
+    /* color:#0071c5 !important; */
+    color:#325b94 !important;
 }
 
 .hp-slide {
@@ -616,4 +624,11 @@ a:hover {
 }
 .business-row {
     margin-bottom: 50px;
+}
+
+.logo-text {
+    /* background: #ecedea;
+    padding: 10px 10px;
+    display: inline-block;
+    margin-right: 20px; */
 }

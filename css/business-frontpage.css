@@ -382,12 +382,6 @@ a:hover {
         font-size: 12px !important;
     }
 
-    .head-logo {
-        /* padding-left: 14px !important; */
-        margin-left: 0px !important;
-        font-size: 20px !important;
-    }
-
     .business-header-small h1 {
         font-size: 18px;
     }
@@ -426,6 +420,10 @@ a:hover {
         background-color: #0071c5;
     }
 
+    .head-logo {
+        padding-left: 0px !important;
+    }
+
 }
 
 .transition-timer-carousel-progress-bar {
@@ -462,11 +460,13 @@ a:hover {
     height: 50px;
     line-height: 20px;
     margin: auto;
+    padding-left: 100px;
+    margin-left: 0px !important;
+    font-size: 20px !important;
     /* padding-top: 10px; */
     /* width: 60%; */
     /* border: 3px solid #73AD21; */
     /* padding: 10px; */
-    
 }
 
 .head-logo:hover {
@@ -599,6 +599,7 @@ a:hover {
     position: fixed;
     right: 0;
     bottom: 0;
+    cursor: pointer;
 }
 
 .icon-customize{

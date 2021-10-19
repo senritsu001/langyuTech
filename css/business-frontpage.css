@@ -789,3 +789,9 @@ margin: 8px;
 .fa-subway {
     color: #0071c5;
 }
+
+
+.btn-primary {
+    background-color: #004196;
+    border-radius: 0;
+}

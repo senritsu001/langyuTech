@@ -73,7 +73,7 @@ $(window).load(function () {
     //This event fires immediately when the bootstrap slide instance method is invoked.
     function progressBarCarousel() {
         $bar.css({width: percent + '%'});
-        percent = percent + 0.5;
+        percent = percent + 0.2;
         if (percent >= 100) {
             percent = 0;
             $crsl.carousel('next');

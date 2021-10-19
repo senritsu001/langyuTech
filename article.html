@@ -102,7 +102,9 @@
             });
 
         // Generate toc dynamic
-        $('#tocUL').toc();
+        $('#tocUL').toc(
+            {content: "body", headings: "h1,h2"}
+        );
 
         // Add scroll spy
         $('#articleToc ul').addClass("nav nav-stacked");

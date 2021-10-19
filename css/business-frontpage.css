@@ -341,7 +341,7 @@ a:hover {
 
 .myCarousel {
     margin-top: 50px;
-    height: 700px;
+    height: 500px;
 }
 
 .carousel-inner .item {
@@ -351,7 +351,7 @@ a:hover {
     background: linear-gradient(to bottom, #a7cfdf 0%, #23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7cfdf', endColorstr='#23538a', GradientType=0); /* IE6-9 */
     text-align: center;
-    height: 700px; /*change as your needs*/
+    height: 500px; /*change as your needs*/
 }
 
 .control-buttons {
@@ -499,7 +499,7 @@ a:hover {
     padding-left: 100px;
     margin-left: 0px !important;
     /* font-size: 20px !important; */
-    padding-top: 5px;
+    padding-top: 3px;
     /* width: 60%; */
     /* border: 3px solid #73AD21; */
     /* padding: 10px; */
@@ -710,7 +710,11 @@ a:hover {
 	min-height: 100%;
 	padding: 0;;
   }
-   
+
+  .modal-content {
+    border:0px !important
+  }
+
 .fullscreen .modal-content {
     height: 100%;
     min-height: 100%;
@@ -774,8 +778,8 @@ margin: 8px;
 }
 
 .modal-header-custom {
-    padding: 6px !important;
-    background-color: #fff;
+    padding: 0px !important;
+    background-color: #f8f8f8;
 }
 
 .close {

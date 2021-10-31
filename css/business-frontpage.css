@@ -69,7 +69,7 @@ html {
 }
 
 .business-header-large {
-    height: 320px;
+    height: 350px;
 }
 
 .business-header-small {
@@ -790,8 +790,17 @@ margin: 8px;
     color: #0071c5;
 }
 
-
 .btn-primary {
     background-color: #005bac;
     border-radius: 0;
+}
+
+.business-header-policy {
+    background: url('../images/policy.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /* Margin top by footer height */
+    margin-top: 50px;
 }

@@ -459,6 +459,9 @@ a:hover {
         height: auto !important;
     }
 
+    .embed-responsive-5by2 {
+        padding-bottom: 75% !important;
+    }
 }
 
 .transition-timer-carousel-progress-bar {
@@ -588,7 +591,7 @@ a:hover {
 }
 
 .map-bottom {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 .wrap-newsList-link a:before {
@@ -803,4 +806,8 @@ margin: 8px;
     -o-background-size: cover;
     /* Margin top by footer height */
     margin-top: 50px;
+}
+
+.embed-responsive-5by2 {
+    padding-bottom: 40%;
 }

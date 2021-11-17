@@ -367,6 +367,7 @@ a:hover {
 
     .logo-text {
         font-size: 18px;
+        margin-left: 0px !important;
     }
 
     .dev_description_more, .bus_description_more {
@@ -810,4 +811,8 @@ margin: 8px;
 
 .embed-responsive-5by2 {
     padding-bottom: 40%;
+}
+
+.head-logo a img {
+    height:50px;
 }

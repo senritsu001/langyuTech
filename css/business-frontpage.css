@@ -428,7 +428,7 @@ a:hover {
     }
     
     .navbar-nav>li>a {
-        margin-left: 10px;
+        margin-left: -5px;
     }
     
     .navbar-collapse{
@@ -462,6 +462,10 @@ a:hover {
 
     .embed-responsive-5by2 {
         padding-bottom: 75% !important;
+    }
+
+    .head-logo a img {
+        margin-left : -6px !important;
     }
 }
 
@@ -692,7 +696,7 @@ a:hover {
 }
 
 .navbar-right-custom {
-    margin-right: 8%;
+    margin-right: 13%;
 }
 
 .navbar-brand {
@@ -814,5 +818,7 @@ margin: 8px;
 }
 
 .head-logo a img {
-    height:50px;
+    height: 80px;
+    margin-top: -14px;
+    margin-left: 121px;
 }

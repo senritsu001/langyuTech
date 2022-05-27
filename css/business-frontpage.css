@@ -504,7 +504,7 @@ a:hover {
     height: 50px;
     line-height: 20px;
     margin: auto;
-    padding-left: 100px;
+    padding-left: 50%;
     margin-left: 0px !important;
     /* font-size: 20px !important; */
     /* padding-top: 3px; */
@@ -820,5 +820,5 @@ margin: 8px;
 .head-logo a img {
     height: 80px;
     margin-top: -14px;
-    margin-left: 121px;
+    margin-left: 216%;
 }

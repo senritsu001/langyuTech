@@ -465,7 +465,7 @@ a:hover {
     }
 
     .head-logo a img {
-        margin-left : -6px !important;
+        margin-left : 4px !important;
     }
 }
 
@@ -818,7 +818,7 @@ margin: 8px;
 }
 
 .head-logo a img {
-    height: 80px;
-    margin-top: -14px;
-    margin-left: 216%;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 96%;
 }

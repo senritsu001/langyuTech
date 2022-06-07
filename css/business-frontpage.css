@@ -189,7 +189,8 @@ html {
 .bs-docs-sidebar .nav .nav .nav > .active > a,
 .bs-docs-sidebar .nav .nav .nav > .active:hover > a,
 .bs-docs-sidebar .nav .nav .nav > .active:focus > a {
-    font-weight: 500;
+    font-weight: 600
+    ;
 }
 
 .bs-docs-sidebar .nav ul.nav {
@@ -341,7 +342,7 @@ a:hover {
 
 .myCarousel {
     margin-top: 50px;
-    height: 500px;
+    height: 100%;
 }
 
 .carousel-inner .item {
@@ -351,7 +352,7 @@ a:hover {
     background: linear-gradient(to bottom, #a7cfdf 0%, #23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7cfdf', endColorstr='#23538a', GradientType=0); /* IE6-9 */
     text-align: center;
-    height: 500px; /*change as your needs*/
+    height: 100%; /*change as your needs*/
 }
 
 .control-buttons {
@@ -539,7 +540,7 @@ a:hover {
 
 .carousel-caption-cs {
     position:absolute;
-    bottom: 200px;
+    bottom: 270px;
     text-align: left;
 }
 .navbar .navbar-toggle.collapsed .icon-bar:nth-of-type(1) {
@@ -703,9 +704,10 @@ a:hover {
     padding-left: 40px;
 }
 
-.slide-img-custom {
+/* .slide-img-custom {
     max-width : inherit !important;
-}
+} */
+
 .business-row {
     margin-bottom: 50px;
 }

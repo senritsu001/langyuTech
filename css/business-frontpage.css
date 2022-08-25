@@ -341,8 +341,8 @@ a:hover {
 }
 
 .myCarousel {
-    margin-top: 50px;
-    height: 100%;
+    margin-top: -80px;
+    /* height: 100%; */
 }
 
 .carousel-inner .item {

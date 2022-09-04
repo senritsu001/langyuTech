@@ -468,6 +468,11 @@ a:hover {
     .head-logo a img {
         margin-left : 4px !important;
     }
+
+    .myCarousel {
+        margin-top: 50px;
+        /* height: 100%; */
+    }
 }
 
 .transition-timer-carousel-progress-bar {

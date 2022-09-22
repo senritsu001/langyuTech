@@ -597,8 +597,8 @@ a:hover {
     background-color: #5c5b5b;
 }
 
-.navbar-toggle .icon-bar {
-    width: 28px;
+.navbar-toggle {
+    margin-right: 4px !important;
 }
 
 .map-bottom {
@@ -749,7 +749,7 @@ opacity: 1;
 .fullscreen .modal-content button span{
     color: #5c5b5b;
     font-weight: 1;
-    font-size: 26px;
+    font-size: 28px;
     text-shadow: none;
 }
 

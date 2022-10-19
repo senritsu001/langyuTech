@@ -702,7 +702,7 @@ a:hover {
 }
 
 .navbar-right-custom {
-    margin-right: 13%;
+    margin-right: 4%;
 }
 
 .navbar-brand {
@@ -827,5 +827,5 @@ margin: 8px;
 .head-logo a img {
     height: 30px;
     margin-top: 10px;
-    margin-left: 96%;
+    /* margin-left: 96%; */
 }

@@ -342,7 +342,7 @@ a:hover {
 }
 
 .myCarousel {
-    margin-top: -80px;
+    margin-top: -200px;
     /* height: 100%; */
 }
 
@@ -474,6 +474,10 @@ a:hover {
         margin-top: 50px;
         /* height: 100%; */
     }
+
+    .carousel-control {
+        top:0px !important;
+    }
 }
 
 .transition-timer-carousel-progress-bar {
@@ -488,6 +492,7 @@ a:hover {
 
 .carousel-control {
     z-index: 11;
+    top:160px;
 }
 
 .mail-icon, .phone-icon, .icon-normal {
@@ -750,7 +755,7 @@ opacity: 1;
 .fullscreen .modal-content button span{
     color: #5c5b5b;
     font-weight: 1;
-    font-size: 28px;
+    font-size: 40px;
     text-shadow: none;
 }
 
@@ -799,7 +804,7 @@ margin: 8px;
 }
 
 .close {
-    margin: 12px !important;
+    margin: 4px 12px 0px 0px !important;
 }
 
 .fa-subway {

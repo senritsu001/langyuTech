@@ -551,7 +551,7 @@ a:hover {
 
 .carousel-caption-cs {
     position:absolute;
-    bottom: 270px;
+    bottom: 200px;
     text-align: left;
 }
 .navbar .navbar-toggle.collapsed .icon-bar:nth-of-type(1) {

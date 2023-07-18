@@ -362,6 +362,9 @@ a:hover {
 
 @media (max-width: 768px) {
 
+    body {
+        font-size: 12px;
+    }
     .carousel-inner > .item {
         height: inherit;
         font-size: small;

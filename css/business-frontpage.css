@@ -784,9 +784,9 @@ font-size: 16px;
 width: 56px;
 margin: 8px;
 }
-.modal-title{
+/* .modal-title{
 	color: #fff;
-  }
+  } */
 
 .fullscreen .modal-body li:hover {
     background-color: #0c419a;
@@ -844,4 +844,13 @@ margin: 8px;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color :#ffffff;
+}
+
+.noborder {
+    border-right: 1px solid #fff !important;
+    border-left: 1px solid #fff !important;
+}
+
+.modal-dialog-centered {
+    margin-top: 20%;
 }

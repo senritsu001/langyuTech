@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery-Validation-Plugin Bootstrap 連携サンプル</title>
+		<link
+			href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+			rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script
+			src="http://netdna.bootstrapcdn.com/bootstrap/3.6.0/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/validationEngine.jquery.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/gh/posabsolute/jQuery-Validation-Engine@3.1.0/js/jquery.validationEngine.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/posabsolute/jQuery-Validation-Engine@3.1.0/js/languages/jquery.validationEngine-ja.js"></script>
+	</head>
+
+
+	
+	
+
+		<!-- <form action="" method="post" id="form1" name="send">
+
+			<label>お名前をご入力ください。
+				<input type="text" name="name" class="input1 validate[required]">
+			</label>
+		</p>
+		<p>
+
+			<label>メールアドレスをご入力ください。
+
+				<input type="email" name="email"
+					class="input3 validate[required,custom[email]] mail-address">
+			</label>
+		</p>
+			<input type="image" alt="送信" src class="btn" id="send_button" disabled="">
+		</form> -->
+
+<style>
+@charset "UTF-8";
+
+/****************************************
+Development 2021.12
+*****************************************
+0.COMMON
+  0-1.BASE
+  0-2.FORM
+****************************************
+
+0.COMMON
+
+*****************************************
+0-1.BASE
+****************************************/
+body {
+    font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #0e2c5e;
+}
+
+em {
+    font-style: normal;
+}
+
+dl, dt, dd {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap {
+      resize: horizontal;
+      overflow: hidden;
+      word-break: keep-all;
+  }
+}
+
+.head_title {
+    padding: 1rem 0;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+main {
+    margin: 0;
+}
+
+.contents {
+    margin: 0 1rem;
+    text-align: center;
+}
+
+/****************************************
+0-2.FORM
+****************************************/
+.contactForm {
+    width: 100%;
+    margin: 2rem 0 0;
+}
+
+.contactForm + .contents_desc {
+    margin: 0 .5rem;
+}
+
+.contactForm_term {
+    padding: .5rem 1rem;
+    font-size: 1em;
+    text-align: left;
+    font-weight: bold;
+    background: #d3dff5;
+    color: #000f2b;
+}
+
+.contactForm_term_requiredMark {
+    padding: .25rem .5rem;
+    margin-left: .25rem;
+    font-size: .8em;
+    background: #f5059d ;
+    color: #fff;
+}
+
+.contactForm_desc {
+    position: relative;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    background: #edf0f5;
+}
+
+.contactForm_desc_wrap select::-ms-expand {
+    display: none;
+}
+
+.contactForm_desc_wrap {
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #666;
+    background: #fff;
+}
+
+.contactForm_desc_wrap::before {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-top: .5rem solid #666;
+    pointer-events: none;
+}
+
+.contactForm_desc input[disabled="disabled"] {
+    color:transparent; 
+}
+
+.contactForm_desc input[type="text"],
+.contactForm_desc input[type="email"],
+.contactForm_desc input[type="tel"],
+.contactForm_desc textarea {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1em;
+}
+
+.contactForm_desc textarea {
+    resize: none;
+    width: calc(100% - 1.5rem);
+    height: 8rem;
+}
+
+.contactForm_desc-radio [type="radio"] {
+    visibility:hidden;
+    position: absolute;
+    top: 1rem;
+    left: .5rem;
+}
+
+.contactForm_desc-radio label {
+    display:block;
+    position: relative;
+    padding: 1rem 1rem 1rem 2.8rem;
+    margin-top: .5rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.contactForm_desc-radio label::before,
+.contactForm_desc-radio label::after {
+    content: "";
+    display: block; 
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.contactForm_desc-radio label::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: .5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.contactForm_desc-radio label::after {
+    width: 0;
+    height: 0;
+    background: #80bced;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.contactForm_desc-radio [type="radio"]:checked + label::after {
+    width: 1rem;
+    height: 1rem;
+    left: .8rem;
+    opacity: 1;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+.contactForm_desc-radio [type="radio"]:checked + label {
+    background: #80bced;
+    color: #fff;
+    font-weight: bold;
+}
+
+.contactForm_desc_comments_input {
+    padding: calc(0.65rem - 2px);
+}
+
+.contactForm_desc-radio label + .contactForm_desc_comments_input {
+    padding-top: 0;
+}
+
+.contactForm_desc-radio [type="radio"]:checked + label + .contactForm_desc_comments_input,
+.contactForm_desc-checkbox [type="checkbox"]:checked + label + .contactForm_desc_comments_input {
+    background: #80bced;
+}
+
+.contactForm_desc-checkboxAgree {
+    display: block;
+    position: relative;
+    padding: 0;
+    background: none;
+}
+
+.contactForm_desc-checkboxAgree [type="checkbox"] {
+    visibility: hidden;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+}
+
+.contactForm_desc-checkboxAgree [type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding: 1rem 1rem 1rem 2.5rem;
+    margin-top: .5rem;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.contactForm_desc-checkboxAgree [type="checkbox"] + label::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -.9rem;
+    margin-left: -8rem;
+    border: 3px solid #999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: .8;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+.contactForm_desc-checkboxAgree [type="checkbox"]:checked + label {
+    background: #f5059d;
+    color:#fff;
+    font-weight: bold;
+}
+
+.contactForm_desc-checkboxAgree [type="checkbox"]:checked + label::before {
+    width: .8rem;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.5rem;
+    margin-left: -8rem;
+    border-color: #fff;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.contactForm_desc-checkboxAgree [type="checkbox"] {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -.5rem;
+    margin-left: -7.5rem;
+}
+
+.contactForm_desc_wrap select {
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+input [type="submit"] {
+    cursor: pointer;
+}
+
+#submit {
+    -webkit-appearance: none;
+    display: block;
+    width: 90%;
+    padding: 1rem .5rem;
+    margin: 3rem auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #80bced;
+    color: #fff;
+    border: none;
+    border-radius: 4rem;
+}
+
+/*validationEngine.jquery.css*/
+.formError .formErrorContent {
+    font-size: .9em;
+}
+
+</style>
+
+
+<body>
+
+<div class="wrap">
+    <head>
+      <h1 class="head_title">
+        よくある問い合わせ<wbr>フォーム
+      </h1>
+    </head>
+    <main class="page">
+      <article class="contents">
+        <p class="contents_desc">
+          下記フォームから<wbr>お問い合わせください。<br>
+          お問い合わせの内容によっては、<wbr>お時間をいただく場合がございます<wbr>…というテストです。
+        </p>
+
+        <form action="" method="post" id="contact">
+          <dl class="contactForm">
+            <dt class="contactForm_term">
+              お問い合わせ種別
+              <span class="contactForm_term_requiredMark">
+                必須
+              </span>
+            </dt>
+            <dd class="contactForm_desc">
+              <div class="contactForm_desc_wrap">
+                <select name="" class="validate[required]">
+                  <option value="">種別を選択してください</option>
+                  <option value="仕事について">仕事についての問い合わせ</option>
+                  <option value="求人について">求人についての問い合わせ</option>
+                  <option value="その他">その他の問い合わせ</option>
+                </select>
+              </div>
+            </dd>
+          </dl>
+
+          <dl class="contactForm">
+            <dt class="contactForm_term">
+              <label for="company">
+                会社名
+              </label>
+            </dt>
+            <dd class="contactForm_desc">
+              <input type="text" name="companyName" id="company">
+            </dd>
+          </dl>
+
+          <dl class="contactForm">
+            <dt class="contactForm_term">
+              <label for="name">
+                お名前
+                <span class="contactForm_term_requiredMark">
+                  必須
+                </span>
+              </label>
+            </dt>
+            <dd class="contactForm_desc">
+              <input type="text" name="userName" id="name" class="validate[required]">
+            </dd>
+          </dl>
+
+          <dl class="contactForm">
+            <dt class="contactForm_term">
+              <label for="email">
+                メールアドレス
+                <span class="contactForm_term_requiredMark">
+                  必須
+                </span>
+              </label>
+            </dt>
+            <dd class="contactForm_desc">
+              <input type="email" name="userMail" id="email" class="validate[required,custom[email]]">
+            </dd>
+          </dl>
+
+          <dl class="contactForm">
+            <dt class="contactForm_term">
+              <label for="approach">
+                連絡方法
+                <span class="contactForm_term_requiredMark">
+                  必須
+                </span>
+              </label>
+            </dt>
+            <dd class="contactForm_desc contactForm_desc-radio">
+              <input type="radio" name="otherContact" value="メールアドレス" id="approach01" class="validate[required]"><label for="approach01">メールアドレス</label>
+              <div class="contactForm_desc_comments">
+                <input type="radio" name="otherContact" value="電話番号" id="approach02"><label for="approach02">電話番号</label>
+                <div class="contactForm_desc_comments_input">
+                  <input type="tel" name="otherContactComent" class="validate[condRequired[approach02]]" disabled="disabled">
+                </div>
+              </div><!-- /.contactForm_desc_comments -->
+              <div class="contactForm_desc_comments">
+                <input type="radio" name="otherContact" value="その他" id="approach03"><label for="approach03">その他</label>
+                <div class="contactForm_desc_comments_input">
+                  <input type="text" name="otherContactComent" class="validate[condRequired[approach03]]" >
+                </div>
+              </div><!-- /.contactForm_desc_comments -->
+            </dd>
+          </dl>
+
+          <dl class="contactForm">
+            <dt class="contactForm_term">
+              <label for="detail">
+                お問い合わせ内容
+                <span class="contactForm_term_requiredMark">
+                  必須
+                </span>
+              </label>
+            </dt>
+            <dd class="contactForm_desc">
+              <textarea name="contactDetail" id="detail" class="validate[required]"></textarea>
+            </dd>
+          </dl>
+
+          <p class="contactForm_text contactForm_text-center">
+            内容を送信する前に<a href="">利用規約</a><wbr>をご確認ください。
+          </p>
+          <div class="contactForm_desc contactForm_desc-checkboxAgree">
+            <input type="checkbox" name="userConfirmed" id="agree" value="応募規約に確認しました" class="validate[required]" data-prompt-position="centerRight: 16,24"><label for="agree">利用規約を確認しました</label>
+          </div>
+
+          <input type="submit" id="submit" value="送信する">
+        </form>
+      </article>
+    </main>
+
+  </div><!-- /wrap -->
+
+
+  <script>
+
+$(document).ready(function () {
+  //フォームバリデーション
+  $("#contact").validationEngine("attach", {
+    promptPosition: "topLeft: 0", // エラーの位置指定
+    showArrowOnRadioAndCheckbox: true, // ラジオボタンやチェックボックスのエラーに吹き出しを付ける
+    custom_error_messages: { //エラーテキストオプション
+      required: { //デフォルトのエラーテキスト
+        message: "必須項目です"
+      },
+      "#contactDetail": {
+        required: {
+          message: "選択してください"
+        }
+      },
+      "#name": {
+        required: {
+          message: "名前を入れてください"
+        }
+      },
+      "#approach01": {
+        required: {
+          message: "選択してください"
+        }
+      },
+      "custom[email]": {
+        message: "正しいメールアドレスを入れてください"
+      },
+      "#agree": {
+        required: {
+          message: "確認してください"
+        }
+      }
+    }
+  });
+
+  //ラジオボタンと入力エリア連動
+  $("[name='otherContact']")
+    .change(function () {
+      if ($("input:radio[id='approach02']:checked").val() == "電話番号") {
+        $("#approach02")
+          .nextAll(".contactForm_desc_comments_input")
+          .children("input[type=tel]")
+          .removeAttr("disabled");
+      } else {
+        $("#approach02")
+          .nextAll(".contactForm_desc_comments_input")
+          .children("input[type=tel]")
+          .attr("disabled", "disabled");
+      }
+      if ($("input:radio[id='approach03']:checked").val() == "その他") {
+        $("#approach03")
+          .nextAll(".contactForm_desc_comments_input")
+          .children("input[type=text]")
+          .removeAttr("disabled");
+      } else {
+        $("#approach03")
+          .nextAll(".contactForm_desc_comments_input")
+          .children("input[type=text]")
+          .attr("disabled", "disabled");
+      }
+    })
+    .trigger("change");
+
+  //連打緩和
+  $("#submit").on("click", function () {
+    $(this).css({ opacity: " .5", "pointer-events": "none" });
+  });
+
+  $("form").change(function () {
+    //フォーム内の要素に変更があると発火
+    $("#submit").css({ opacity: " 1", "pointer-events": "auto" });
+  });
+});
+  </script>
+
+</body>
+
+</html>

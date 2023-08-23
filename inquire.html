@@ -1,76 +1,267 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="日本朗裕株式会社は安心安全なソフトウェア構築を目指す、受託開発、人材提供を行っています。">
-    <meta name="author" content="langyutech.jp,日本朗裕株式会社,日本朗裕(株)">
-    <title>お問い合せ | 日本朗裕株式会社</title>
-    <!-- <link rel="icon" href="images/logo/langyuTech.png" sizes=""> -->
-    <link rel="shortcut icon" href="images/logo/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="images/logo/langyuTech.png">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/business-frontpage.css" rel="stylesheet">
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <meta name="description" content="日本朗裕株式会社は安心安全なソフトウェア構築を目指す、受託開発、人材提供を行っています。">
+        <meta name="author" content="langyutech.jp,日本朗裕株式会社,日本朗裕(株)">
+        <title>お問い合せ | 日本朗裕株式会社</title>
+        <link rel="shortcut icon" href="images/logo/favicon.ico">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/business-frontpage.css" rel="stylesheet">
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/validationEngine.jquery.min.css">
+    </head>
 
-<body>
-<div id="ty_header"></div>
-<!-- Page Content -->
-<div class="container">
-    <div class="well-sm">
-        お気軽にお問い合わせください。
-        <span id="inquire_loading">
-            <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...
-        </span>
-    </div>
-    <iframe id="inquireForm" src="https://sgfm.jp/f/c0050aade1b61e18701d25431eab3eb8" width="100%" height="800" frameborder="0" style="border:0"></iframe>
-    <hr>
-</div>
-<!-- /.container -->
-<div id="ty_footer"></div>
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/ty_com.js"></script>
-<script>
-    $('#inquire').click(function () {
-        $('#myModal').modal();
-    });
-
-    $('#inquireForm').on('load', function () {
-        $('#inquire_loading').delay(300).queue(function () {
-            $(this).hide();
-        });//hide(0);
+    <body>
+        <div id="ty_header"></div>
+        <!-- Page Content -->
         
-        var adBlock = document.getElementsByClassName('ad-block');
-        if (adBlock.length > 0) {
-        alert("1111");
-        adBlock[0].remove();
-        }
-    });
-</script>
-<!-- Google Analytics -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            <div class="center-block" style="text-align: center;">
+                <h4>お気軽にお問い合わせください。</h4>
+            </div>
+            <div class="container">
+                <form name="contactform" id="contactform" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">氏名 <span class="label label-danger">必須</span></label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control validate[required]" placeholder="朗裕 太郎" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">メールアドレス <span class="label label-danger">必須</span></label>
+                        <div class="col-xs-9">
+                            <input type="email" class="form-control validate[required,custom[email]]" placeholder="info@langyutech.jp" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">会社名前 </label>
+                        <div class="col-xs-9"><input type="text" class="form-control" placeholder="日本朗裕株式会社" name="company"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">電話番号 </label>
+                        <div class="col-xs-9"><input type="text" class="form-control validate[custom[phone]]" placeholder="123-4567-8900" name="tel"></div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">件名 </label>
+                        <div class="col-xs-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="subject" value="bp" id="subject01" onclick="changeDisabled()"> ビジネスパートナーについて
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="subject" value="service" id="subject02" onclick="changeDisabled()">サービスについて
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="subject" value="recruit" id="subject03" onclick="changeDisabled()">採用について
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="subject" value="other" id="subject04" onclick="changeDisabled()">その他(下記の件名にご記入ください)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3"> </label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control validate[condRequired[subject04]]" placeholder="〇〇について" id="otherContactComent" name="otherContactComent">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">お問い合わせ内容 <span class="label label-danger">必須</span></label>
+                        <div class="col-xs-9">
+                            <textarea placeholder="お問い合わせ内容" rows="10" class="form-control validate[required]" name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">個人情報の取り扱いについて </label>
+                        <div class="col-xs-9">
+                            <textarea placeholder="お問い合わせ内容" rows="10" class="form-control validate[required]" readonly>
+    個人情報の取扱いについて（お問い合わせフォーム）
+    
+    (１) 事業者の名称 日本朗裕株式会社
+    
+    (２) 個人情報保護管理者の氏名又は職名、所属及び連絡先
+    個人情報保護管理者：常務執行役員 銭 立
+    メール：info@langyutech.jp ＴＥＬ：03-6429-7162
+    
+    (３) 個人情報の利用目的 ・お問い合わせ、資料請求に対応するため。弊社サービスのご案内のため
+    
+    (４) 個人情報の第三者提供について
+    取得した個人情報は法令等による場合を除いて第三者に提供することはありません。
+    
+    (５) 個人情報の取扱いの委託について
+    取得した個人情報の取扱いの全部又は、一部を委託することがあります。
+    委託に際しては、個人情報の取扱いについて当社水準と同等かそれ以上の安全を担保できる事業者を選定します。
+    
+    (６) 必要な個人情報を提供いただけない場合に生じる結果
+    お問い合わせに必要な個人情報をご提供いただけない場合は、お問い合わせ内容に回答出来ない場合があります。
+    
+    (７) 開示対象個人情報の開示等および問い合わせ窓口について
+    ご本人からの請求により、当社が保有する開示対象個人情報に関する開示、利用目的の通知、内容の訂正・追加または削除、
+    利用停止、消去および第三者提供の停止、第三者提供記録の開示に応じます。
+    ご連絡窓口は、下記「当社の個人情報の取扱いに関する苦情、相談等の問合せ先」を参照してください。
+    
+    (８) 本人が容易に認識できない方法による個人情報の取得
+    クッキーやウェブビーコン等を用いるなどして、本人が容易に認識できない方法による個人情報の取得は行っておりません。
+    
+    (９) 個人情報の安全管理措置について
+    取得した個人情報については、漏洩、減失またはき損の防止と是正、その他個人情報の安全管理のために必要かつ適切な措置を講じます。
+    お問い合わせおいて取得した個人情報は、当社内において保管期間を定め、保管期間経過後は削除又は破棄いたします。
+    
+    (１０) 個人情報保護方針 当社ホームページの個人情報保護方針をご覧下さい。
+    
+    (１１) 当社の個人情報の取扱いに関する苦情、相談等の問合せ先
+    【個人情報お問い合わせ窓口】
+    窓口責任者：個人情報保護管理者 住 所：〒101-0032 東京都千代田区岩本町2-7-13
+    渡辺ビル3階 ＴＥＬ：03-6429-7162 メール：info@langyutech.jp
+                        </textarea>
+                        <label style="padding-top: 15px;"><input class="validate[required]" type="checkbox" id="agree" name="agree"/> 同意する </label><span class="label label-danger">必須</span>
+                    </div>
+                    <div class="form-group"></div>
+                        <div class="center-block" style="text-align: center;">
+                            <button style="width: 220px" type="button" id="btnSend" class="btn btn-primary btn-lg">  送信する  </button>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <div class="col-sm-offset-6 col-sm-6">
+                            <button type="button" id="btnSend" class="btn btn-primary btn-lg">送信</button>
+                        </div>
+                    </div> -->
+            </div>
+                </form>
+        <hr>
+    </div>
 
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-</body>
+        <!-- /.container -->
+        <div id="ty_footer"></div>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ty_com.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/posabsolute/jQuery-Validation-Engine@3.1.0/js/jquery.validationEngine.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/posabsolute/jQuery-Validation-Engine@3.1.0/js/languages/jquery.validationEngine-ja.js"></script>
+        <script>
+
+        function changeDisabled() {
+			if ( document.contactform["subject"][3].checked ) {
+				document.contactform["otherContactComent"].disabled = false;
+			} else {
+				document.contactform["otherContactComent"].disabled = true;
+                $(".otherContactComentformError.parentFormcontactform.formError").css("display", "none");
+                // $('#otherContactComent').validationEngine('hide');
+			}
+		}
+		window.onload = changeDisabled;
+
+		$(document).ready(function () {
+			$("#contactform").validationEngine('attach', {
+				promptPosition: "bottomLeft" //アラートの吹き出しを左下に設定
+			});
+		});
+		$(function () {
+			$("#btnSend").on("click", function () {
+				if ($("#contactform").validationEngine("validate")) {
+					$("#btnSend").prop("disabled", true);
+						// フォームのデータをJSONに変換
+						var rawData = $('#contactform').serializeArray();
+						var data = {};
+						jQuery.each(rawData, function(i, e) {
+							data[e.name] = e.value;
+						});
+						// Ajaxを使ってメールを送信
+						$.ajax({
+							type: "POST",
+							url: "https://contact.langyutech.jp/sendmail",
+							dataType: "json",
+							data: JSON.stringify(data),
+							contentType: 'application/json',
+							scriptCharset: 'utf-8',
+							success: function(outdata, dataType) {
+								if (outdata[0] == "OK") {
+                                    $("#btnSend").prop("disabled", true);
+                                    $('#contatcOKModal').modal();
+                                }
+							},
+							error: function(XMLHttpRequest, textStatus, errorThrown) {
+								$("#btnSend").prop("disabled", false);
+                                $('#contatcErrorModal').modal();
+							}
+					});
+				} else {
+
+                }
+
+            // 後処理
+            setTimeout(function(){
+                var scrollToppx=$(window).scrollTop();
+                // alert("後処理" + scrollToppx);
+                $(window).scrollTop(scrollToppx - 60);
+            }, 1150);
+			});
+
+		});
+        </script>
+        <!-- Google Analytics -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('send', 'pageview');
+        </script>
+    <!-- End Google Analytics -->
+
+		<!-- モーダル・ダイアログ -->
+		<div class="modal fade" id="contatcOKModal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content modal-dialog-centered">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>✕</span></button>
+						<h4 class="modal-title">問い合わせ完了</h4>
+					</div>
+					<div class="modal-body">
+						問い合わせありがとうございました。
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- モーダル・ダイアログ -->
+		<div class="modal fade" id="contatcErrorModal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span>✕</span></button>
+						<h4 class="modal-title">問い合わせ失敗</h4>
+					</div>
+					<div class="modal-body">
+						大変申し訳ございませんでした、「info@langyutech.jp」までに問い合わせしてください。
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    </body>
 
 </html>
